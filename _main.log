@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.2)  13 JAN 2026 18:47
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.2)  13 JAN 2026 23:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1938,9 +1938,33 @@ Overfull \hbox (6.09021pt too wide) in paragraph at lines 246--247
  [] 
  []
 
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <12> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 249.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(1)/m/n' will be
+(Font)              scaled to size 12.0pt on input line 251.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(1)/m/n' will be
+(Font)              scaled to size 8.4pt on input line 251.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(1)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 251.
 [24
 
 ]
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 11.28032pt on input line 346.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 8.24133pt on input line 346.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(1)/m/n' will be
+(Font)              scaled to size 10.95pt on input line 346.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(1)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 346.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 11.28131pt on input line 346.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 8.24207pt on input line 346.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 11.27914pt on input line 346.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 8.24048pt on input line 346.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1949,6 +1973,57 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [25]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 573.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 573.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 573.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 573.
+
+
+Overfull \hbox (82.0539pt too wide) in paragraph at lines 595--596
+ [][] 
+ []
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 607.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 607.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 607.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 607.
+
+
+Overfull \hbox (82.0539pt too wide) in paragraph at lines 629--630
+ [][] 
+ []
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 641.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 641.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 641.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 641.
+
+
+Overfull \hbox (76.8219pt too wide) in paragraph at lines 667--668
+ [][] 
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2029,19 +2104,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [35]
-Overfull \hbox (6.09021pt too wide) in paragraph at lines 313--314
+Overfull \hbox (6.09021pt too wide) in paragraph at lines 730--731
  [] 
  []
 
 [36
 
 ]
-Overfull \hbox (6.09021pt too wide) in paragraph at lines 330--331
+Overfull \hbox (6.09021pt too wide) in paragraph at lines 747--748
  [] 
  []
 
-LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <12> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 333.
 No file _main.bbl.
 [37
 
@@ -2052,12 +2125,12 @@ L3 programming layer <2025-12-29>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 56989 strings out of 470195
- 1348990 string characters out of 5477728
- 2113047 words of memory out of 5000000
- 84595 multiletter control sequences out of 15000+600000
- 642972 words of font info for 100 fonts, out of 8000000 for 9000
+ 57376 strings out of 470195
+ 1357471 string characters out of 5477728
+ 2160672 words of memory out of 5000000
+ 84959 multiletter control sequences out of 15000+600000
+ 652197 words of font info for 130 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 116i,11n,128p,1686b,894s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,11n,128p,1686b,1154s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on _main.pdf (39 pages).
