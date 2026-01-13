@@ -1,6 +1,6 @@
 \chapterfont{\color{white}}
 
-# Trigonometric Equations
+# Trig Equations
 
 \vspace{-12cm}
 \begin{center}
@@ -8,214 +8,51 @@
 \draw[white] (10,5) circle (0.01);
 \draw[DarkOrchid,fill=DarkOrchid] (0,0) rectangle (18.2,0.2);
 \draw[DarkOrchid,fill=DarkOrchid] (6,1.8) rectangle (18.2,0.2);
-\node[white] at (12.1,1) {\Huge{\textsc{Trigonometric Equations}}};
-\node at (3,1) {\Large{\textsc{Chapter 15}}};
+\node[white] at (12.1,1) {\Huge{\textsc{Trig Equations}}};
+\node at (3,1) {\Large{\textsc{Chapter 23}}};
 \end{tikzpicture}
 \end{center}
 
-Each part of an operation of the form $a^n$ can be described using the following terminology:
+\newpage
 
-\begin{center}
-    \begin{tikzpicture}
-        \node at (0,0) {\large{$a^n$}};
-        \draw[stealth-,DarkOrchid,thick] (0.3,0.2) --++(1,0.5) node[right] {"power" or "exponent"};
-        \draw[stealth-,DarkOrchid,thick] (-0.32,0) --++(-1,0.2) node[left] {"base"};
-    \end{tikzpicture}
-\end{center}
+## Solving Trig Equations Graphically
 
-*Power functions* take the form $f(x)=x^n$, with $x$ as the \textcolor{DarkOrchid}{\textit{base}} and a constant power, $n$.
+\newpage
 
-\[\text{e.g.}\quad f(x)=x^3\]
+### Exercise 23.1 {-}
 
-*Exponential functions* take the form $f(x)=a^x$, with $x$ as the \textcolor{DarkOrchid}{\textit{exponent}} and a constant base, $a>0,a\ne 1$.
+\newpage
 
-\[\text{e.g.}\quad f(x)=3^x\]
+## Using the ASTC Diagram
 
-An example of an exponential function in everyday life is that of something *appreciating* by a percentage of its value, such as an antique vase of value £4000 increasing by 20\% each year. Its value after $0$ years, $1$ years, $2$ years, and so on, can be calculated as follows:
+\newpage
 
-\begin{align*}
-    \color{black!25}4000\times 1.2^0\;=\;&4000 && \color{DarkOrchid}\longleftarrow\text{After 0 years}\\[0.5em]
-    4000\times 1.2^{\color{DarkOrchid}1}\color{black}\;=\;&4800 && \color{DarkOrchid}\longleftarrow\text{After 1 year}\\[0.5em]
-    4000\times 1.2^{\color{DarkOrchid}2}\color{black}\;=\;&5760 && \color{DarkOrchid}\longleftarrow\text{After 2 years}\\[0.5em]
-    4000\times 1.2^{\color{DarkOrchid}3}\color{black}\;=\;&6912 && \color{DarkOrchid}\longleftarrow\text{After 3 years}\\[0.5em]
-    4000\times 1.2^{\color{DarkOrchid}4}\color{black}\;=\;&8294.40 && \color{DarkOrchid}\longleftarrow\text{After 4 years}
-\end{align*}
+### Exercise 23.2 {-}
 
-The function to describe its value $V$ after $\color{DarkOrchid}x$ years is given by: $V(\color{DarkOrchid}x\color{black})=4000\times1.2^{\color{DarkOrchid}x}$
+\newpage
 
-One advantage of defining this function is the ability to calculate the value at times other that after whole years. For example, the value after \textcolor{DarkOrchid}{three and a half years} can be calculated as:
+## Points of Intersection
 
-\[V(\color{DarkOrchid}3.5\color{black})=4000\times1.2^{\color{DarkOrchid}3.5}=7571.72\]
+\newpage
 
-This chapter will introduce a range of skills required when working with exponential functions.
+### Exercise 23.3 {-}
 
-\pagebreak
+\newpage
 
-## Graphs of Exponential Functions
+## Trig Functions in Context
 
-\vspace{-0.5cm}
+\newpage
 
-\setlength{\columnsep}{30pt}
+### Exercise 23.4 {-}
 
-\begin{multicols}{2}
+\newpage
 
-Where $a>1$:
+## Trig Identities
 
-$y=a^x$ is \textit{strictly increasing} on $x\in\mathbb{R}$:
+\newpage
 
-\vspace{-0.5cm}
-\begin{center}
-    \begin{tikzpicture}[scale=0.8]
-        \draw[-stealth] (-5,0) -- (5,0) node[below] {$x$};
-        \draw[-stealth] (0,-1) -- (0,4.5) node[left] {$y$};
-        \node[below left] {O};
-        \draw[smooth,thick,DarkOrchid,domain=-5:5] plot (\x,{1.3^(\x)}) node[above left] {$y=a^x$};
-        \draw[DarkOrchid,fill=DarkOrchid] (0,1) circle (0.05) node[above left] {$1$};
-        \draw[DarkOrchid,fill=DarkOrchid] (1,1.3) circle (0.05) node[above] {$(1,a)$};
-    \end{tikzpicture}
-\end{center}
+### Exercise 23.5 {-}
 
-\vspace{-0.5cm}
-This describes \textbf{exponential growth}.
+\newpage
 
-\columnbreak
-
-Where $0<a<1$:
-
-$y=a^x$ is \textit{strictly decreasing} on $x\in\mathbb{R}$:
-
-\vspace{-0.5cm}
-\begin{center}
-    \begin{tikzpicture}[scale=0.8]
-        \draw[-stealth] (-5,0) -- (5,0) node[below] {$x$};
-        \draw[-stealth] (0,-1) -- (0,4.5) node[left] {$y$};
-        \node[below left] {O};
-        \draw[smooth,thick,DarkOrchid,domain=-5:5] plot (\x,{0.76923^(\x)}) node[above] {$y=a^x$};
-        \draw[DarkOrchid,fill=DarkOrchid] (0,1) circle (0.05) node[above left] {$1$};
-        \draw[DarkOrchid,fill=DarkOrchid] (1,0.76923) circle (0.05) node[above] {$(1,a)$};
-    \end{tikzpicture}
-\end{center}
-
-\vspace{-0.5cm}
-This describes \textbf{exponential decay}.
-
-\end{multicols}
-
-\setlength{\columnsep}{10pt}
-
-Since $a^0=1$, any graph of the form $y=a^x$ will pass through the point $(0,1)$ for all $a\ne 0$.
-
-Since $a^1=a$, any graph of the form $y=a^x$ will pass through the point $(1,a)$ for all $a$.
-
-Determining the equation of the graph of an exponential function can typically be achieved using substitution or consideration of graph transformations, along with knowledge of points $(0,1)$ and $(1,a)$.
-
-\begin{tcolorbox}[title=Example,colback=DarkOrchid!2!, colframe=DarkOrchid]
-
-The graph of $y=a^x+b$ is shown below. 
-
-\vspace{-0.5cm}
-\begin{center}
-    \begin{tikzpicture}
-        \draw[-stealth] (-5,0) -- (5,0) node[below] {$x$};
-        \draw[-stealth] (0,-1) -- (0,4) node[left] {$y$};
-        \node[below left] {O};
-        \draw[smooth,thick,domain=-4:4,yscale=0.2] plot (\x,{2^(\x)+1}) node[above] {$y=a^x+b$};
-        \draw[fill] (0,0.4) circle (0.05) node[above left] {$2$};
-        \draw[fill] (2,1) circle (0.05) node[above left] {$(2,5)$};
-    \end{tikzpicture}
-\end{center}
-
-\tcblower
-
-\vspace{-0.5cm}
-\begin{align*}
-    2&=a^0+b && \color{DarkOrchid}\longleftarrow\text{Substitute }(0,2)\\[0.5em]
-    2&=1+b &&\\[0.5em]
-    1&=b && \color{DarkOrchid}\longleftarrow\text{Solve to obtain }b\\[1em]
-    5&=a^2+1 && \color{DarkOrchid}\longleftarrow\text{Substitute }(2,5)\text{ and }b=1\\[0.5em]
-    4&=a^2 &&\\[0.5em]
-    2&=a && \color{DarkOrchid}\longleftarrow\text{Solve to obtain }a\\[1em]
-    y&=2^x+1&&\color{DarkOrchid}\longleftarrow\text{State equation}
-\end{align*}
-
-\end{tcolorbox}
-
-\pagebreak
-
-### Exercise 15.1 {-}
-
-\begin{enumerate}
-    \item Find the equation of each exponential graphs using the form given.
-    \begin{enumerate}
-        \begin{multicols}{2}
-            \item[(a)] $y=a^x$\\
-            \begin{tikzpicture}[scale=0.8]
-            \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
-            \draw[-stealth] (0,-2) -- (0,4) node[left] {$y$};
-            \draw[smooth,thick,domain=-4:4,yscale=0.2] plot (\x,{2^(\x)+1});
-            \draw[fill] (0,0.4) circle (0.05) node[above left] {$2$};
-            \draw[fill] (2,1) circle (0.05) node[above left] {$(2,5)$};
-            \end{tikzpicture}
-            \item[(c)] $y=a^x$\\
-            \begin{tikzpicture}[scale=0.8]
-            \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
-            \draw[-stealth] (0,-2) -- (0,4) node[left] {$y$};
-            \draw[smooth,thick,domain=-4:4,yscale=0.2] plot (\x,{2^(\x)+1});
-            \draw[fill] (0,0.4) circle (0.05) node[above left] {$2$};
-            \draw[fill] (2,1) circle (0.05) node[above left] {$(2,5)$};
-            \end{tikzpicture}
-            \item[(e)] $y=a^x$\\
-            \begin{tikzpicture}[scale=0.8]
-            \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
-            \draw[-stealth] (0,-2) -- (0,4) node[left] {$y$};
-            \draw[smooth,thick,domain=-4:4,yscale=0.2] plot (\x,{2^(\x)+1});
-            \draw[fill] (0,0.4) circle (0.05) node[above left] {$2$};
-            \draw[fill] (2,1) circle (0.05) node[above left] {$(2,5)$};
-            \end{tikzpicture}
-            \item[(g)] $y=a^x$\\
-            \begin{tikzpicture}[scale=0.8]
-            \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
-            \draw[-stealth] (0,-2) -- (0,4) node[left] {$y$};
-            \draw[smooth,thick,domain=-4:4,yscale=0.2] plot (\x,{2^(\x)+1});
-            \draw[fill] (0,0.4) circle (0.05) node[above left] {$2$};
-            \draw[fill] (2,1) circle (0.05) node[above left] {$(2,5)$};
-            \end{tikzpicture}
-            \item[(b)] $y=a^x$\\
-            \begin{tikzpicture}[scale=0.8]
-            \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
-            \draw[-stealth] (0,-2) -- (0,4) node[left] {$y$};
-            \draw[smooth,thick,domain=-4:4,yscale=0.2] plot (\x,{2^(\x)+1});
-            \draw[fill] (0,0.4) circle (0.05) node[above left] {$2$};
-            \draw[fill] (2,1) circle (0.05) node[above left] {$(2,5)$};
-            \end{tikzpicture}
-            \item[(d)] $y=a^x$\\
-            \begin{tikzpicture}[scale=0.8]
-            \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
-            \draw[-stealth] (0,-2) -- (0,4) node[left] {$y$};
-            \draw[smooth,thick,domain=-4:4,yscale=0.2] plot (\x,{2^(\x)+1});
-            \draw[fill] (0,0.4) circle (0.05) node[above left] {$2$};
-            \draw[fill] (2,1) circle (0.05) node[above left] {$(2,5)$};
-            \end{tikzpicture}
-            \item[(f)] $y=a^x$\\
-            \begin{tikzpicture}[scale=0.8]
-            \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
-            \draw[-stealth] (0,-2) -- (0,4) node[left] {$y$};
-            \draw[smooth,thick,domain=-4:4,yscale=0.2] plot (\x,{2^(\x)+1});
-            \draw[fill] (0,0.4) circle (0.05) node[above left] {$2$};
-            \draw[fill] (2,1) circle (0.05) node[above left] {$(2,5)$};
-            \end{tikzpicture}
-            \item[(h)] $y=a^x$\\
-            \begin{tikzpicture}[scale=0.8]
-            \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
-            \draw[-stealth] (0,-2) -- (0,4) node[left] {$y$};
-            \draw[smooth,thick,domain=-4:4,yscale=0.2] plot (\x,{2^(\x)+1});
-            \draw[fill] (0,0.4) circle (0.05) node[above left] {$2$};
-            \draw[fill] (2,1) circle (0.05) node[above left] {$(2,5)$};
-            \end{tikzpicture}
-        \end{multicols}
-    \end{enumerate}
-\end{enumerate}
-
-\pagebreak
-
-## Logarithms
+## Review Exercise {-}
