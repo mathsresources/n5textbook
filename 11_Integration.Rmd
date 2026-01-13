@@ -1,0 +1,542 @@
+\chapterfont{\color{white}}
+
+# Integration
+
+\vspace{-12cm}
+\begin{center}
+\begin{tikzpicture}
+\draw[white] (10,5) circle (0.01);
+\draw[blue!70!black!70!,fill=blue!70!black!70!] (0,0) rectangle (18.2,0.2);
+\draw[blue!70!black!70!,fill=blue!70!black!70!] (8,1.8) rectangle (18.2,0.2);
+\node[white] at (13.1,1) {\Huge{\textsc{Integration}}};
+\node at (4,1) {\Large{\textsc{Chapter 11}}};
+\end{tikzpicture}
+\end{center}
+
+### Introduction and Overview {-}
+
+In mathematics, \textit{integration} can be thought of as the process of calculating some kind of *"sum"*, such as the total area under a curve, by breaking it down into sums of increasingly small parts. This technique was known about and used thousands of years ago in both Ancient Greece and other parts of the world.
+
+\begin{center}
+    \begin{multicols}{3}
+
+    \begin{tikzpicture}[scale=0.9]
+        \draw[white] (-3,-1) rectangle (3.2,2);
+        \draw[fill=blue!20] (-1.6,0) rectangle (-1.2,0.72);
+        \draw[fill=blue!20] (-1.2,0) rectangle (-0.8,1.28);
+        \draw[fill=blue!20] (-0.8,0) rectangle (-0.4,1.68);
+        \draw[fill=blue!20] (-0.4,0) rectangle (0,1.92);
+        \draw[fill=blue!20] (0,0) rectangle (0.4,2);
+        \draw[fill=blue!20] (0.4,0) rectangle (0.8,1.92);
+        \draw[fill=blue!20] (0.8,0) rectangle (1.2,1.68);
+        \draw[fill=blue!20] (1.2,0) rectangle (1.6,1.28);
+        \draw[fill=blue!20] (1.6,0) rectangle (2,0.72);
+        \draw[-stealth,thick] (-3,0) -- (3,0) node[below] {$x$};
+        \draw[smooth,domain=-2:2,thick] plot (\x,-0.5*\x*\x+2);
+        \node[below] at (0,0) {$\Delta x=0.4$};
+    \end{tikzpicture}
+    
+    \begin{tikzpicture}[scale=0.9]
+        \draw[white] (-3,-1) rectangle (3.2,2);
+        \foreach \x in {-2,-1.8,...,1.8}{
+        \draw[fill=blue!20] (\x,0) rectangle (\x+0.2,-0.5*\x*\x+2);
+        }
+        \draw[-stealth,thick] (-3,0) -- (3,0) node[below] {$x$};
+        \draw[smooth,domain=-2:2,thick] plot (\x,-0.5*\x*\x+2);
+        \node[below] at (0,0) {$\Delta x=0.2$};
+    \end{tikzpicture}
+    
+    \begin{tikzpicture}[scale=0.9]
+        \draw[white] (-3,-1) rectangle (3.2,2);
+        \draw[smooth,domain=-2:2,,thick,fill=blue!20] plot (\x,-0.5*\x*\x+2);
+        \draw[-stealth,thick] (-3,0) -- (3,0) node[below] {$x$};
+        \node[below] at (0,0) {As $\Delta x\to 0$};
+    \end{tikzpicture}
+    
+    \end{multicols}
+\end{center}
+
+In the 17th century both Gottfried Wilhelm Leibniz and Isaac Newton independently discovered the *fundamental theorem of calculus*, showing that *integration* can be performed using *antidifferentiation*, which is the 'reverse' of differentiation. Now, *integration* is used to refer to both the idea of calculating such a 'sum', and to the process of antidifferentiation. 
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[very thick,blue!70!black!70!,-stealth] (120:6) arc (120:60:6);
+        \draw[very thick,blue!70!black!70!,-stealth] (120:6) arc (120:60:6);
+    \end{tikzpicture}
+\end{center}
+
+This chapter will first introduce the use of integration to calculate an *antiderivative*, before moving on to using this concept to calculating area enclosed using curves. 
+
+### Chapter Contents {-}
+
+\begin{itemize}
+    \setlength\itemsep{2em}
+    \item[\textcolor{blue!70!black!70!}{\textbullet}] 11.1 Indefinite Integrals
+    \item[\textcolor{blue!70!black!70!}{\textbullet}] 11.2 Differential Equations
+    \item[\textcolor{blue!70!black!70!}{\textbullet}] 11.3 Definite Integrals
+    \item[\textcolor{blue!70!black!70!}{\textbullet}] 11.4 The Area Under a Curve
+    \item[\textcolor{blue!70!black!70!}{\textbullet}] 11.5 The Area Between Two Curves
+\end{itemize}
+
+Integration skills covered in this chapter will be extended upon in the later chapter of \textbf{Further Calculus}.
+
+\newpage
+
+## Indefinite Integrals
+
+The \textit{derivative} of the function $f(x)=x^3-4x^2-7x+3$ is obtained by \textit{multiplying by the power} and then \textit{reducing the power by one} for each term.
+
+\vspace{-0.5cm}
+
+\begin{align*}
+    \text{If }f(x)&=x^3-4x^2+3\\
+    \text{Then }f'(x)&=3x^2-8x
+\end{align*}
+
+\vspace{-0.5cm}
+
+\textit{Integration} can be considered the \textit{inverse} of differentiation, with the aim of taking the \textit{derivative} $f'(x)$ and determining the \textit{original function} $f(x)$. However, given only the derivative $f'(x)=3x^2-8x$ it would not be possible to know any constant term the original function $f(x)$ contained. Finding the \textit{indefinite integral} of a function requires the inclusion of a \textcolor{blue!70!black!70!}{\textbf{Constant of Integration}, $C$}:
+
+\vspace{-0.5cm}
+
+\begin{flalign*}
+    \text{If }f'(x)&=3x^2-8x\\
+    \text{Then }f(x)&=x^3-4x^2\color{blue!70!black!70!}+C
+\end{flalign*}
+
+\vspace{-0.5cm}
+
+\begin{center}
+\begin{tcolorbox}[colback=red!5,width=14cm,colframe=red!70!black]
+\textbf{Indefinite Integrals:}
+\textcolor{black}{\textit{"The (indefinite) integral of }$x^n$\textit{ with respect to }$x$\textit{..."}}
+    \begin{center}
+        \[\int (x^n)\phantom{.}dx = \frac{x^{n+1}}{n+1}+C\]
+    \end{center}
+    In other words, \textbf{increase the power by 1} then \textbf{divide by the new power.}
+\end{tcolorbox}
+\end{center}
+
+The \textit{integral sign}, $\displaystyle\int$, should always appear accompanied by $dx$, for a function in $x$.
+
+Note: $\displaystyle{\int (f(x)+g(x))}\;dx=\displaystyle{\int f(x)\;dx+\int g(x\;dx)}$
+
+\begin{tcolorbox}[title=Example 11.1.1,colback=blue!1, colframe=blue!70!black!70!]
+
+Find $\displaystyle{\int (6x^2+8x)}\,dx $.
+
+\tcblower
+
+\vspace{-0.3cm}
+
+\begin{align*}
+    &\int (6x^2+8x)\,dx&&\\[0.5em]
+    =\;&\frac{6x^3}{3}+\frac{8x^2}{2}+C&&\color{blue!70!black!70!}\longleftarrow \text{Constant of integration}\\[0.5em]
+    =\;&2x^3+4x^2+C&&\color{blue!70!black!70!}\longleftarrow \text{Simplify}
+\end{align*}
+
+\end{tcolorbox}
+
+\pagebreak
+
+As with differentiation, \textit{preparation for integration} may be needed.
+
+\begin{tcolorbox}[title=Example 11.1.2,colback=blue!1, colframe=blue!70!black!70!]
+
+Find $\displaystyle{\int \left(4\sqrt{x}-\frac{3}{x^2}\right)}\,dx,\;,x>0$.
+
+\tcblower
+
+\vspace{-0.3cm}
+
+\begin{align*}
+    &\int \left(4\sqrt{x}-\frac{3}{x^2}\right)\,dx&&\\[0.5em]
+    =\;&\int \left(4x^{\frac{1}{2}}-3x^{-2}\right)\,dx&&\color{blue!70!black!70!}\longleftarrow \text{Preparing to integrate}\\[0.5em]
+    =\;&\frac{4x^{\frac{3}{2}}}{\frac{3}{2}}-\frac{3x^{-1}}{-1}+C&&\color{blue!70!black!70!}\longleftarrow \text{Integrate: }\frac{1}{2}+1=\frac{1}{2}+\frac{2}{2}=\frac{3}{2}\\[0.5em]
+    =\;&\frac{8}{3}x^{\frac{3}{2}}+3x^{-1}+C&&\color{blue!70!black!70!}\longleftarrow \text{Simplify: }4\div\frac{3}{2}=\frac{4}{1}\times\frac{2}{3}=\frac{8}{3}
+\end{align*}
+
+\end{tcolorbox}
+
+The \textit{derivative} of a \textit{linear} term is a \textit{constant}, so the integral of a \textit{constant} is \textit{linear}.
+
+\begin{tcolorbox}[title=Example 11.1.3,colback=blue!1, colframe=blue!70!black!70!]
+
+Find $\displaystyle{\int \left((2x-1)(x+3)\right)}\,dx$.
+
+\tcblower
+
+\vspace{-0.3cm}
+
+\begin{align*}
+    &\int \left((2x-1)(x+3)\right)\,dx&&\\[0.5em]
+    =\;&\int \left(2x^2-5x-3\right)\,dx&&\color{blue!70!black!70!}\longleftarrow \text{Preparing to integrate}\\[0.5em]
+    =\;&\frac{2x^3}{3}-\frac{5x^2}{2}-3x+C&&\color{blue!70!black!70!}\longleftarrow \text{Integral of }-3\text{ is }-3x
+\end{align*}
+
+\end{tcolorbox}
+
+Integration \textit{with respect to variables other than} $x$ should not use $dx$, and the notation used should match the variable of the function instead. 
+
+\begin{tcolorbox}[title=Example 11.1.4,colback=blue!1, colframe=blue!70!black!70!]
+
+Find $\displaystyle{\int \left(3t^2-5\right)}\,dt$.
+
+\tcblower
+
+\vspace{-0.3cm}
+
+\begin{align*}
+    &\int \left(3t^2-5\right)\,dt&&\\[0.5em]
+    =\;&\frac{3t^3}{3}-5t+C&&\\[0.5em]
+    =\;&t^3-5t+C&&
+\end{align*}
+
+\end{tcolorbox}
+
+\pagebreak
+
+## Differential Equations
+
+\pagebreak
+
+## Definite Integrals
+
+\vspace{-0.5cm}
+
+The indefinite integral of the function $f(x)$ can be notated as $F(x)$:
+
+\[\int f(x)\;dx=F(x)\]
+
+The \textit{definite integral} of $f(x)$ from $a$ to $b$ is the difference between $F(b)$ and $F(a)$:
+
+\[\int_a^b f(x)\;dx=F(b)-F(a)\]
+
+Together, they form a core part of the \textbf{Fundamental Theorem of Calculus}:
+
+\begin{center}
+\begin{tcolorbox}[colback=red!5,width=14cm,colframe=red!70!black]
+\textbf{Fundamental Theorem of Calculus:}
+
+\[\displaystyle{\int_a^b f(x)\;dx=F(b)-F(a)}\]
+\centering
+where 
+\[\displaystyle{F(x) = \int f(x)\;dx}\]
+
+\end{tcolorbox}
+\end{center}
+
+Since any \textit{constant of integration} within $F(x)$ will cancel through subtraction ($C-C$), it is \textit{not included} when calculating a \textit{definite integral}.
+
+\begin{tcolorbox}[title=Example 11.3.1,colback=blue!1, colframe=blue!70!black!70!]
+
+Find $\displaystyle{\int_1^2 \left(3x^2+6x-2\right)}\,dx$.
+
+\tcblower
+
+\vspace{-0.3cm}
+
+\begin{align*}
+    &\displaystyle{\int_1^2 \left(3x^2+6x-2\right)}\,dx&&\\[0.5em]
+    =\;&\left[\frac{3x^3}{3}+\frac{6x^2}{2}-2x\right]_1^2&&\color{blue!70!black!70!}\longleftarrow \text{Integrate}\\[0.5em]
+    =\;&\left[x^3+3x^2-2x\right]_1^2&&\color{blue!70!black!70!}\longleftarrow \text{Simplify}\\[0.5em]
+    =\;&\left((2)^3+3(2)^2-2(2)\right)-\left((1)^3+5(1)^2-2(1)\right)&&\color{blue!70!black!70!}\longleftarrow \text{Substitute}\\[0.5em]
+    =\;&16-4\\[0.5em]
+    =\;&12&&\color{blue!70!black!70!}\longleftarrow \text{Evaluate}
+\end{align*}
+
+\end{tcolorbox}
+
+\pagebreak
+
+## The Area Under a Curve
+
+\vspace{-0.5cm}
+
+The area shaded below, with each \textit{"bar"} having width $1$ unit, is given by the \textit{sum} $1+2+3+1+2$.
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[fill=blue!20,domain=1:3,smooth] (0.6,0) rectangle (1.2,0.6);
+        \draw[fill=blue!20,domain=1:3,smooth] (1.2,0) rectangle (1.8,1.2);
+        \draw[fill=blue!20,domain=1:3,smooth] (1.8,0) rectangle (2.4,1.8);
+        \draw[fill=blue!20,domain=1:3,smooth] (2.4,0) rectangle (3,0.6);
+        \draw[fill=blue!20,domain=1:3,smooth] (3,0) rectangle (3.6,1.2);
+        \draw[-stealth] (-1,0) -- (4.5,0) node[below] {$x$};
+        \draw[=stealth] (0,-0.5) -- (0,2.5) node[left] {$y$};
+        \foreach \x in {1,2,...,6}{
+        \node[below] at (\x*0.6,0) {\x};
+        }
+        \node[left] at (0,0.6) {$1$};
+        \node[left] at (0,1.2) {$2$};
+        \node[left] at (0,1.8) {$3$};
+        \node[below left] {$0$};
+    \end{tikzpicture}
+\end{center}
+
+
+An integral, $\displaystyle{\int}$, can be seen as \textit{"sum"}, but for a continuous function. Given a function $f(x)$, the area enclosed between a section of the curve $y=f(x)$ and the $x$-axis can be calculated using a definite integral.
+
+\begin{center}
+\begin{tcolorbox}[colback=red!5,width=16cm,colframe=red!70!black]
+\textbf{Area Under a Curve:}
+
+\vspace{0.2cm}
+
+\begin{center}
+    \begin{tikzpicture}
+        \fill[blue!20,domain=1:3,smooth] (3,0) -- (1,0) -- (1,1) -- (3,1.6) -- cycle;
+        \fill[red!5,domain=1:3,smooth] plot (\x,0.1*\x*\x-0.1*\x+1);
+        \draw[-stealth] (-1,0) -- (5,0) node[below] {$x$};
+        \draw[=stealth] (0,-0.5) -- (0,3) node[left] {$y$};
+        \draw[smooth,domain=-0.3:
+        4,yscale=0.1] plot (\x,\x*\x-\x+10) node[right] {$y=f(x)$};
+        \draw[dashed] (1,0) -- (1,1);
+        \draw[dashed] (3,0) -- (3,1.6);
+        \node at (1,-0.3) {$a$};
+        \node at (3,-0.3) {$b$};
+        \node at (10,1.2) {Area $\displaystyle{=\int_a^b f(x)\;dx=F(b)-F(a)}$};
+    \end{tikzpicture}
+\end{center}
+
+\end{tcolorbox}
+\end{center}
+
+The values of $a$ and $b$ can be referred to as the \textit{bounds} of the integration.
+
+\begin{tcolorbox}[title=Example 11.4.1,colback=blue!1, colframe=blue!70!black!70!]
+
+Part of the graph of $y=5+2x-x^2$ is shown. Calculate the shaded area.
+
+\begin{center}
+    \begin{tikzpicture}
+        \fill[blue!20,smooth,domain=-1:2] plot (\x,0.25*5+0.5*\x-0.25*\x*\x);
+        \fill[blue!20] (-1,0) -- (-1,0.5) -- (2,1.25) -- (2,0) -- cycle; 
+        \draw[-stealth] (-2.5,0) -- (4.5,0) node[below] {$x$};
+        \draw[-stealth] (0,-1) -- (0,2) node[left] {$y$};
+        \node[below left] {$0$};
+        \draw[smooth,domain=-1.8:3.8,yscale=0.25] plot (\x,5+2*\x-\x*\x) node[below] {$y=5+2x-x^2$};
+        \draw (-1,0) -- (-1,0.5);
+        \draw (2,0) -- (2,1.25); 
+        \node at (-1,-0.3) {$-1$};
+        \node at (2,-0.3) {$2$};
+    \end{tikzpicture}
+\end{center}
+
+\tcblower
+
+
+\begin{align*}
+    &\displaystyle{\int_{-1}^2 \left(5+2x-x^2\right)}\,dx&&\color{blue!70!black!70!}\longleftarrow \text{Area}\\[0.5em]
+    =\;&\left[5x+x^2-\frac{x^3}{3}\right]_{-1}^2&&\color{blue!70!black!70!}\longleftarrow \text{Integrate}\\[0.5em]
+    =\;&\left(5(2)+(2)^2-\frac{(2)^3}{3}\right)-\left(5(-1)+(-1)^2-\frac{(-1)^3}{3}\right)&&\color{blue!70!black!70!}\longleftarrow \text{Substitute}\\[0.5em]
+    =\;&\frac{34}{3}-\left(-\frac{11}{3}\right)&&\color{blue!70!black!70!}\longleftarrow \text{Evaluate}\\[0.5em]
+    =\;&15\text{ square units}
+\end{align*}
+
+\end{tcolorbox}
+
+\newpage
+
+Where the area between a curve and the $x$-axis lies \textit{under} the $x$-axis, the definite integral will be negative. 
+
+\begin{center}
+    \begin{tikzpicture}
+        \fill[green!25,smooth,domain=1:3,yscale=0.25] plot (\x,\x*\x*\x-10*\x*\x+27*\x-18);
+        \fill[red!25,smooth,domain=3:6,yscale=0.25] plot (\x,\x*\x*\x-10*\x*\x+27*\x-18);
+        \draw[-stealth] (-0.5,0) -- (7.5,0) node[below] {$x$};
+        \draw[-stealth] (0,-2) -- (0,2.5) node[left] {$y$};
+        \draw[smooth,domain=0.6:6.2,yscale=0.25] plot (\x,\x*\x*\x-10*\x*\x+27*\x-18) node[right] {$y=f(x)$};
+        \draw[stealth-] (2.8,0.6) -- (3.5,1.6) node[above] {$\displaystyle{\int_a^b f(x)\;dx=A_1}$};
+        \node at (2,0.5) {$A_1$};
+        \node at (4.5,-1) {$A_2$};
+        \draw[stealth-] (6,-1) -- (7,-1.5) node[right] {$\displaystyle{\int_b^c f(x)\;dx=-A_2}$};
+        \draw[fill] (1,0) circle (0.03);
+        \draw[fill] (3,0) circle (0.03);
+        \draw[fill] (6,0) circle (0.03);
+        \node at (1.1,-0.2) {\small{$a$}};
+        \node at (2.9,-0.2) {\small{$b$}};
+        \node at (6.1,-0.2) {\small{$c$}};
+    \end{tikzpicture}
+\end{center}
+
+To avoid \textit{"positve"} and \textit{"negative"} areas cancelling each other out, such sections must be calculated as separate integrals, and their \textit{absolute values} added.
+
+\[\text{Area }=A_1+A_2\]
+
+\begin{tcolorbox}[title=Example 11.4.2,colback=blue!1, colframe=blue!70!black!70!]
+
+Part of the graph of $y=x^3-10x^2+27x-18$ is shown. Calculate the shaded area.
+
+\begin{center}
+    \begin{tikzpicture}
+        \fill[blue!20,smooth,domain=1:3,yscale=0.25] plot (\x,\x*\x*\x-10*\x*\x+27*\x-18);
+        \fill[blue!20,smooth,domain=3:6,yscale=0.25] plot (\x,\x*\x*\x-10*\x*\x+27*\x-18);
+        \draw[-stealth] (-0.5,0) -- (7.5,0) node[below] {$x$};
+        \draw[-stealth] (0,-2) -- (0,2) node[left] {$y$};
+        \draw[smooth,domain=0.6:6.2,yscale=0.25] plot (\x,\x*\x*\x-10*\x*\x+27*\x-18) node[above right] {$y=x^3-10x^2+27x-18$};
+        \draw[fill] (1,0) circle (0.03);
+        \draw[fill] (3,0) circle (0.03);
+        \draw[fill] (6,0) circle (0.03);
+        \node at (1.1,-0.2) {\small{$1$}};
+        \node at (2.9,-0.2) {\small{$3$}};
+        \node at (6.1,-0.2) {\small{$6$}};
+    \end{tikzpicture}
+\end{center}
+
+\tcblower
+
+
+\begin{align*}
+    &\displaystyle{\int_1^3 \left(x^3-10x^2+27x-18\right)}\,dx&&\displaystyle{\int_3^6 \left(x^3-10x^2+27x-18\right)}\,dx\\[0.5em]
+    &=\left[\frac{x^4}{4}-\frac{10x^3}{3}+\frac{27x^2}{2}-18x\right]_1^3&&=\left[\frac{x^4}{4}-\frac{10x^3}{3}+\frac{27x^2}{2}-18x\right]_3^6\\[0.5em]
+    &=\left(\frac{(3)^4}{4}-\frac{10(3)^3}{3}+\frac{27(3)^2}{2}-18(3)\right)&&=\left(\frac{(6)^4}{4}-\frac{10(6)^3}{3}+\frac{27(6)^2}{2}-18(6)\right)\\[0.5em]
+    &-\left(\frac{(1)^4}{4}-\frac{10(1)^3}{3}+\frac{27(1)^2}{2}-18(1)\right)&&-\left(\frac{(3)^4}{4}-\frac{10(3)^3}{3}+\frac{27(3)^2}{2}-18(3)\right)\\[0.5em]
+    &=-\frac{9}{4}-\left(-\frac{91}{12}\right)&&=-18-\left(-\frac{9}{4}\right)\\[0.5em]
+    &=\frac{16}{3}&&=-\frac{63}{4}
+\end{align*}
+\vspace{0.3cm}
+\hspace{3cm}
+$\therefore\text{ Area }=\dfrac{16}{3}+\dfrac{63}{4}=\dfrac{253}{12}\text{ square units}$
+
+\end{tcolorbox}
+
+\pagebreak
+
+## The Area Between Two Curves
+
+\vspace{-0.5cm}
+
+The area \textbf{between} two curves can be calculated using the subtraction of one definite integral from another:
+
+\begin{multicols}{3}
+
+\begin{center}
+    \begin{tikzpicture}
+        \fill[blue!20,domain=1:3,smooth] (3,0) -- (1,0) -- (1,1) -- (3,1.6) -- cycle;
+        \fill[blue!20,domain=1:3,smooth] plot (\x,-0.1*\x*\x+0.7*\x+0.4);
+        \draw[-stealth] (-0.5,0) -- (4.5,0) node[below] {$x$};
+        \draw[=stealth] (0,-0.5) -- (0,2.5) node[left] {$y$};
+        \draw[smooth,domain=-0.3:
+        3.5,yscale=0.1] plot (\x,\x*\x-\x+10) node[above right] {$g(x)$};
+        \draw[smooth,domain=-0.3:
+        3.5,yscale=0.1] plot (\x,-\x*\x+7*\x+4) node[right] {$f(x)$};
+        \draw[dashed] (1,0) -- (1,1);
+        \draw[dashed] (3,0) -- (3,1.6);
+        \node at (1,-0.3) {$a$};
+        \node at (3,-0.3) {$b$};
+        \node at (2,-1.3) {$\displaystyle{\int_a^b f(x)\;dx}$};
+    \end{tikzpicture}
+\end{center}
+
+    \begin{center}
+    \begin{tikzpicture}
+        \fill[blue!20,domain=1:3,smooth] (3,0) -- (1,0) -- (1,1) -- (3,1.6) -- cycle;
+        \fill[pattern color = blue!70!black!70!,pattern=north west lines,domain=1:3,smooth] (3,0) -- (1,0) -- (1,1) -- (3,1.6) -- cycle;
+        \fill[white,domain=1:3,smooth] plot (\x,0.1*\x*\x-0.1*\x+1);
+        \draw[-stealth] (-0.5,0) -- (4.5,0) node[below] {$x$};
+        \draw[=stealth] (0,-0.5) -- (0,2.5) node[left] {$y$};
+        \draw[smooth,domain=-0.3:
+        3.5,yscale=0.1] plot (\x,\x*\x-\x+10) node[above right] {$g(x)$};
+        \draw[smooth,domain=-0.3:
+        3.5,yscale=0.1] plot (\x,-\x*\x+7*\x+4) node[right] {$f(x)$};
+        \draw[dashed] (1,0) -- (1,1);
+        \draw[dashed] (3,0) -- (3,1.6);
+        \node at (1,-0.3) {$a$};
+        \node at (3,-0.3) {$b$};
+        \node at (2,-1.3) {$\displaystyle{\int_a^b g(x)\;dx}$};
+    \end{tikzpicture}
+\end{center}
+
+\begin{center}
+    \begin{tikzpicture}
+        \fill[blue!20,domain=1:3,smooth] plot (\x,-0.1*\x*\x+0.7*\x+0.4);
+        \fill[blue!20,domain=1:3,smooth] plot (\x,0.1*\x*\x-0.1*\x+1);
+        \draw[-stealth] (-0.5,0) -- (4.5,0) node[below] {$x$};
+        \draw[=stealth] (0,-0.5) -- (0,2.5) node[left] {$y$};
+        \draw[smooth,domain=-0.3:
+        3.5,yscale=0.1] plot (\x,\x*\x-\x+10) node[above right] {$g(x)$};
+        \draw[smooth,domain=-0.3:
+        3.5,yscale=0.1] plot (\x,-\x*\x+7*\x+4) node[right] {$f(x)$};
+        \draw[dashed] (1,0) -- (1,1);
+        \draw[dashed] (3,0) -- (3,1.6);
+        \node at (1,-0.3) {$a$};
+        \node at (3,-0.3) {$b$};
+        \node at (2,-1.3) {$\displaystyle{\int_a^b f(x)\;dx-\int_a^b g(x)\;dx}$};
+    \end{tikzpicture}
+\end{center}
+
+\end{multicols}
+
+\vspace{-0.2cm}
+
+Note that $\displaystyle{\int_a^b f(x)\;dx-\int_a^b g(x)\;dx=\int_a^b (f(x)-g(x))\;dx}$, leading to the following formula:
+
+\begin{center}
+\begin{tcolorbox}[colback=red!5,width=16cm,colframe=red!70!black]
+
+\textbf{Area Between Two Curves:}
+
+\vspace{-0.5cm}
+
+\begin{center}
+    \begin{tikzpicture}
+        \fill[blue!20,domain=1:3,smooth] plot (\x,-0.1*\x*\x+0.7*\x+0.4);
+        \fill[blue!20,domain=1:3,smooth] plot (\x,0.1*\x*\x-0.1*\x+1);
+        \draw[-stealth] (-0.5,0) -- (4.5,0) node[below] {$x$};
+        \draw[=stealth] (0,-0.5) -- (0,2.5) node[left] {$y$};
+        \draw[smooth,domain=-0.3:
+        3.5,yscale=0.1] plot (\x,\x*\x-\x+10) node[above right] {$g(x)$ $\longleftarrow$ Lower function};
+        \draw[smooth,domain=-0.3:
+        3.5,yscale=0.1] plot (\x,-\x*\x+7*\x+4) node[right] {$f(x)$ $\longleftarrow$ Upper function};
+        \draw[dashed] (1,0) -- (1,1);
+        \draw[dashed] (3,0) -- (3,1.6);
+        \node at (1,-0.3) {$a$};
+        \node at (3,-0.3) {$b$};
+        \node at (2,-1.4) {Area $=\displaystyle{\int_a^b (f(x)-g(x))\;dx}$ \quad\textbf{or}\quad Area $=\displaystyle{\int_a^b (\text{Upper}-\text{Lower})\;dx}$};
+        \node at (-6,1) {\phantom{.}};
+    \end{tikzpicture}
+\end{center}
+
+\end{tcolorbox}
+\end{center}
+
+\begin{tcolorbox}[title=Example 11.5.1,colback=blue!1, colframe=blue!70!black!70!]
+
+Part of the graphs of $y=-3x$ and $y=4-x^2$ are shown. Calculate the shaded area.
+
+\begin{center}
+    \begin{tikzpicture}
+        \fill[blue!20,domain=-1:4] plot (\x,0.4-0.1*\x*\x);
+        \draw[-stealth] (-3,0) -- (4.5,0) node[below] {$x$};
+        \draw[-stealth] (0,-1.4) -- (0,1.4) node[left] {$y$};
+        \draw[smooth,domain=-2.5:4.2,yscale=0.1] plot (\x,4-\x*\x);
+        \draw[smooth,domain=-2.1:4.2,yscale=0.1] plot (\x,-3*\x);
+        \node[above left] at (-2.1,0.63) {$y=-3x$};
+        \node[below left] at (-2.5,-0.225) {$y=4-x^2$};
+        \node[below left] {$0$};
+        \draw[fill] (-1,0.3) circle (0.04);
+        \draw[fill] (4,-1.2) circle (0.04);
+        \draw[dashed] (-1,0.3) -- (-1,0) node[below] {$-1$};
+        \draw[dashed] (4,-1.2) -- (4,0) node[above] {$4$};
+    \end{tikzpicture}
+\end{center}
+
+\tcblower
+
+\vspace{-0.2cm}
+
+\begin{align*}
+    &\displaystyle{\int_{-1}^4 \left(4-x^2-(-3x)\right)}\,dx&&\color{blue!70!black!70!}\longleftarrow \text{Upper}-\text{Lower}\\[0.5em]
+    &\displaystyle{\int_{-1}^4 \left(4-x^2+3x\right)}\,dx&&\color{blue!70!black!70!}\longleftarrow \text{Simplify}\\[0.5em]
+    =\;&\left[4x-\frac{x^3}{3}+\frac{3x^2}{2}\right]_{-1}^4&&\color{blue!70!black!70!}\longleftarrow \text{Integrate}\\[0.5em]
+    =\;&\left(4(4)-\frac{(4)^3}{3}+\frac{3(4)^2}{2}\right)-\left(4(-1)-\frac{(-1)^3}{3}+\frac{3(-1)^2}{2}\right)&&\color{blue!70!black!70!}\longleftarrow \text{Substitute}\\[0.5em]
+    =\;&\frac{56}{3}-\left(-\frac{13}{6}\right)&&\color{blue!70!black!70!}\longleftarrow \text{Evaluate}\\[0.5em]
+    =\;&\frac{125}{6}\text{ square units}
+\end{align*}
+
+\end{tcolorbox}
+
+\newpage
+
+## Review Exercise {-}

@@ -1,0 +1,17 @@
+\chapterfont{\color{white}}
+
+# Challenge Problems {-}
+
+\vspace{-10.5cm}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[white] (10,5) circle (0.01);
+        \draw[black!50,fill=black!50] (0,0) rectangle (18.2,0.2);
+        \draw[black!50,fill=black!50] (6,1.8) rectangle (18.2,0.2);
+        \node[white] at (12.1,1) {\Huge{\textsc{Challenge Problems}}};
+        \node[white] at (4,1) {\Large{\textsc{Chapter 13}}};
+    \end{tikzpicture}
+\end{center}
+
+The following problems **do not** represent the kind of question expected to feature in a Higher Mathematics exam, either in the way they are presented or the level of difficulty. Instead, they aim to encourage a flexible approach towards problem-solving and an understanding that the skills covered in the course have applications beyond those featured in any typical exam. *Some questions may be solveable without using the skills covered in this chapter, and some questions may be unreleated to this chapter.*

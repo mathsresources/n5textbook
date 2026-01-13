@@ -1,0 +1,14 @@
+\chapterfont{\color{white}}
+
+# The Straight Line
+
+\vspace{-12cm}
+\begin{center}
+\begin{tikzpicture}
+\draw[white] (10,5) circle (0.01);
+\draw[DarkOrchid,fill=DarkOrchid] (0,0) rectangle (18.2,0.2);
+\draw[DarkOrchid,fill=DarkOrchid] (8,1.8) rectangle (18.2,0.2);
+\node[white] at (13.1,1) {\Huge{\textsc{The Straight Line}}};
+\node at (4,1) {\Large{\textsc{Chapter 1}}};
+\end{tikzpicture}
+\end{center}

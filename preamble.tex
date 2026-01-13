@@ -1,0 +1,110 @@
+\usepackage{booktabs}
+\usepackage[top=1cm,bottom=1cm,left=1.5cm,right=1.5cm,includehead,a4paper]{geometry}
+\usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancypagestyle{plain}{%
+  \renewcommand{\headrulewidth}{0pt}%
+  \fancyhf{}%
+}
+  \fancyhf{}
+  \fancyhf[HRO,HLE]{\thepage}
+  \fancyhf[HC]{\leftmark}
+
+%% Book Structure
+\usepackage{booktabs}
+\usepackage{titlesec}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage[no-math]{fontspec}
+\usepackage{lmodern}
+\renewcommand{\familydefault}{lmss}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{unicode-math}
+
+%% Utilities
+\usepackage{tcolorbox}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{wrapfig}
+\graphicspath{ {images/} }
+\usepackage{exsheets}
+\usepackage{setspace}
+\usepackage{etoolbox}
+\usepackage{enumitem}
+\usepackage{graphbox,graphicx}
+\usepackage{float}
+\usepackage{adjustbox}
+\usepackage{quotchap}
+\usepackage{dirtytalk}
+\usepackage{setspace}
+\usepackage{multicol}
+\usepackage{epigraph}
+\usepackage[switch, modulo]{lineno}
+\usepackage{vwcol}
+
+%% Maths and Tikz
+\usepackage{tikz}
+\usepackage{tikzlings}
+\usetikzlibrary{math}
+\usetikzlibrary{patterns}
+\usetikzlibrary{decorations.pathreplacing,angles,quotes}
+\usetikzlibrary{fadings}
+\usepackage{units}
+\usepackage{amssymb}
+\usepackage{pifont}
+\usepackage{nth}
+\usepackage{mathtools}
+\usepackage[draft]{tikzpeople}
+\usepackage{gensymb}
+\usepackage{bm}
+\usepackage{pgfplots}
+\usepackage{pgfmath}
+\pgfplotsset{compat=1.8}
+\usetikzlibrary{shapes.geometric}
+
+%% Defining Stuff
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\newcolumntype{C}[1]{>{\PreserveBackslash\centering}p{#1}}
+\newcolumntype{R}[1]{>{\PreserveBackslash\raggedleft}p{#1}}
+\newcolumntype{L}[1]{>{\PreserveBackslash\raggedright}p{#1}}
+\newenvironment{cols}[1][]{}{}
+\newenvironment{col}[1]{\begin{minipage}{#1}\ignorespaces}{%
+\end{minipage}
+\ifhmode\unskip\fi
+\aftergroup\useignorespacesandallpars}
+
+\def\useignorespacesandallpars#1\ignorespaces\fi{%
+#1\fi\ignorespacesandallpars}
+\makeatletter
+\def\ignorespacesandallpars{%
+  \@ifnextchar\par
+    {\expandafter\ignorespacesandallpars\@gobble}%
+    {}%
+}
+\makeatother
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+\setlist{topsep=0pt, leftmargin=*}
+\setlist[2]{itemsep=5pt}
+
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+
+\tcbuselibrary{skins}
+
+
+\usepackage[dvipsnames]{xcolor}
+
+
+
+\usepackage{sectsty}
+\usepackage{fontawesome5}
+
+\def\doubleunderline#1{\underline{\underline{#1}}}

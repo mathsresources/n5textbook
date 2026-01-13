@@ -1,0 +1,15 @@
+\chapterfont{\color{white}}
+
+# Answers {-}
+
+\vspace{-10.5cm}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[white] (10,5) circle (0.01);
+        \draw[black!50,fill=black!50] (0,0) rectangle (18.2,0.2);
+        \draw[black!50,fill=black!50] (6,1.8) rectangle (18.2,0.2);
+        \node[white] at (12.1,1) {\Huge{\textsc{Answers}}};
+        \node[white] at (4,1) {\Large{\textsc{Chapter 13}}};
+    \end{tikzpicture}
+\end{center}
