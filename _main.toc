@@ -1,41 +1,7 @@
 \contentsline {chapter}{Introduction}{1}{chapter*.2}%
-\contentsline {chapter}{\numberline {1}The Straight Line}{2}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Recurrence Relations}{3}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Differentiation I}{4}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Quadratic Theory}{5}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Sets and Functions}{6}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Trigonometry}{7}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Graph Transformations}{8}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Vectors}{9}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Differentiation II}{10}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Polynomials}{11}{chapter.10}%
-\contentsline {chapter}{\numberline {11}Integration}{12}{chapter.11}%
-\contentsline {subsection}{Introduction and Overview}{12}{section*.3}%
-\contentsline {subsection}{Chapter Contents}{12}{section*.4}%
-\contentsline {section}{\numberline {11.1}Indefinite Integrals}{13}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Differential Equations}{15}{section.11.2}%
-\contentsline {section}{\numberline {11.3}Definite Integrals}{16}{section.11.3}%
-\contentsline {section}{\numberline {11.4}The Area Under a Curve}{17}{section.11.4}%
-\contentsline {section}{\numberline {11.5}The Area Between Two Curves}{21}{section.11.5}%
-\contentsline {section}{Review Exercise}{23}{section*.5}%
-\contentsline {chapter}{\numberline {12}Addition Formulae}{24}{chapter.12}%
-\contentsline {chapter}{\numberline {13}The Circle}{25}{chapter.13}%
-\contentsline {chapter}{\numberline {14}The Wave Function}{26}{chapter.14}%
-\contentsline {section}{\numberline {14.1}The Wave Function using \(k\cos {(x-a)}\)}{27}{section.14.1}%
-\contentsline {subsubsection}{Exercise 14.1}{28}{section*.6}%
-\contentsline {section}{\numberline {14.2}Other Forms of the The Wave Function}{29}{section.14.2}%
-\contentsline {subsubsection}{Exercise 14.2}{29}{section*.7}%
-\contentsline {section}{\numberline {14.3}Maximum and Minimum Values using the Wave Function}{30}{section.14.3}%
-\contentsline {subsubsection}{Exercise 14.3}{30}{section*.8}%
-\contentsline {section}{\numberline {14.4}Solving Equations using the Wave Function}{31}{section.14.4}%
-\contentsline {subsubsection}{Exercise 14.4}{31}{section*.9}%
-\contentsline {section}{\numberline {14.5}Multiple Angles and Different Variables}{32}{section.14.5}%
-\contentsline {subsubsection}{Exercise 14.5}{32}{section*.10}%
-\contentsline {section}{Wave Function Review Exercise}{33}{section*.11}%
-\contentsline {chapter}{\numberline {15}Logs and Exponentials}{34}{chapter.15}%
-\contentsline {section}{\numberline {15.1}Graphs of Exponential Functions}{35}{section.15.1}%
-\contentsline {subsection}{Exercise 15.1}{36}{section*.12}%
-\contentsline {section}{\numberline {15.2}Logarithms}{37}{section.15.2}%
-\contentsline {chapter}{\numberline {16}Further Calculus}{38}{chapter.16}%
-\contentsline {chapter}{Answers}{39}{chapter*.13}%
-\contentsline {chapter}{Challenge Problems}{40}{chapter*.14}%
+\contentsline {chapter}{\numberline {1}Trigonometric Equations}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Graphs of Exponential Functions}{3}{section.1.1}%
+\contentsline {subsection}{Exercise 15.1}{4}{section*.3}%
+\contentsline {section}{\numberline {1.2}Logarithms}{5}{section.1.2}%
+\contentsline {chapter}{Answers}{6}{chapter*.4}%
+\contentsline {chapter}{Challenge Problems}{7}{chapter*.5}%
